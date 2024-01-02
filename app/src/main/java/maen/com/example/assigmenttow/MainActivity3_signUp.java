@@ -44,12 +44,10 @@ public class MainActivity3_signUp extends AppCompatActivity {
         String password = editTextPassword.getText().toString().trim();
 
         if (!studentId.isEmpty() && !password.isEmpty()) {
-            // Save data in SharedPreferences
             saveUserData(studentId, password);
 
             Toast.makeText(MainActivity3_signUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
 
-            // Optionally, navigate to another activity after successful sign-up
             Intent intent = new Intent(MainActivity3_signUp.this, MainActivity.class);
             startActivity(intent);
             finish(); 
