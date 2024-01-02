@@ -17,7 +17,6 @@ public class MainActivity3_signUp extends AppCompatActivity {
     private EditText editTextStudentId, editTextPassword;
     private Button btnSignUp;
 
-    // SharedPreferences key constants
     private static final String PREFS_NAME = "MyPrefs";
     private static final String KEY_STUDENT_ID = "student_id";
     private static final String KEY_PASSWORD = "password";
@@ -44,18 +43,16 @@ public class MainActivity3_signUp extends AppCompatActivity {
         String studentId = editTextStudentId.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        // Perform sign-up logic
         if (!studentId.isEmpty() && !password.isEmpty()) {
             // Save data in SharedPreferences
             saveUserData(studentId, password);
 
-            // Display a toast message
             Toast.makeText(MainActivity3_signUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
 
             // Optionally, navigate to another activity after successful sign-up
             Intent intent = new Intent(MainActivity3_signUp.this, MainActivity.class);
             startActivity(intent);
-            finish(); // Close the SignUpActivity
+            finish(); 
         } else {
             Toast.makeText(MainActivity3_signUp.this, "Please enter valid student ID and password", Toast.LENGTH_SHORT).show();
         }
