@@ -61,11 +61,9 @@ public class ImageActivity extends AppCompatActivity {
                     try {
                         String imageUrl = response.getString("url");
 
-                        // Load image into ImageView using a library like Picasso or Glide
                         ImageView image = findViewById(R.id.image);
                         Picasso.get().load(imageUrl).into(image);
 
-                        // You can still display the title if needed
                         String title = response.getString("title");
                         output.setText("Title: " + title);
                     } catch (JSONException exception) {
