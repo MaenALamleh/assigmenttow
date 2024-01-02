@@ -1,7 +1,6 @@
 package maen.com.example.assigmenttow;
 
 import androidx.appcompat.app.AppCompatActivity;
-// LoginActivity.java
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
