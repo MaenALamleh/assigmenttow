@@ -26,9 +26,9 @@ public class MainActivity2 extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    public void onClickCat(View view) {
-//
-//        Intent intent2 = new Intent(this, cats.class);
-//        startActivity(intent2);
-//    }
+    public void onClickCat(View view) {
+
+        Intent intent2 = new Intent(this, cats.class);
+        startActivity(intent2);
+    }
 }
