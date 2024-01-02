@@ -23,7 +23,7 @@ public class cats extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_image); // Assuming you are using the same layout as before
+        setContentView(R.layout.activity_image); 
 
         queue = Volley.newRequestQueue(this);
         btnrun = findViewById(R.id.btnrun);
@@ -42,7 +42,6 @@ public class cats extends AppCompatActivity {
                     try {
                         String catFact = response.getString("fact");
 
-                        // Display the cat fact
                         outputcat.setText("Cat Fact: " + catFact);
                     } catch (JSONException exception) {
                         Log.d("Error", exception.toString());
